@@ -1,12 +1,12 @@
 Name:             liblognorm
 Version:          2.0.3
-Release:          7
+Release:          8
 Summary:          A tool to normalize log data
 License:          LGPLv2+
 URL:              http://www.liblognorm.com
 Source0:          http://www.liblognorm.com/files/download/%{name}-%{version}.tar.gz
 
-BuildRequires:    chrpath libfastjson-devel libestr-devel pcre-devel
+BuildRequires:    chrpath libfastjson-devel libestr-devel pcre-devel gcc
 
 %description
 Briefly described, liblognorm is a tool to normalize log data.
@@ -82,6 +82,9 @@ chrpath -d %{buildroot}%{_libdir}/liblognorm.so
 %doc %{_docdir}/liblognorm/html
 
 %changelog
+* Tue Jun 08 2021 wulei <wulei80@huawei.com> - 2.0.3-8
+- fixes failed: error: no acceptable C compiler found in $PATH
+
 * Fri Dec 20 2019 wangzhishun <wangzhishun1@huawei.com> - 2.0.3-7
 - Package init
 
