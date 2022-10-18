@@ -1,6 +1,6 @@
 Name:             liblognorm
-Version:          2.0.3
-Release:          8
+Version:          2.0.6
+Release:          1
 Summary:          A tool to normalize log data
 License:          LGPLv2+
 URL:              http://www.liblognorm.com
@@ -82,6 +82,9 @@ chrpath -d %{buildroot}%{_libdir}/liblognorm.so
 %doc %{_docdir}/liblognorm/html
 
 %changelog
+* Thu Jun 16 2022 SimpleUpdate Robot <tc@openeuler.org> - 2.0.6-1
+- Upgrade to version 2.0.6
+
 * Tue Jun 08 2021 wulei <wulei80@huawei.com> - 2.0.3-8
 - fixes failed: error: no acceptable C compiler found in $PATH
 
