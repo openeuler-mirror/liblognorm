@@ -1,10 +1,11 @@
 Name:             liblognorm
 Version:          2.0.6
-Release:          1
+Release:          2
 Summary:          A tool to normalize log data
 License:          LGPLv2+
 URL:              http://www.liblognorm.com
 Source0:          http://www.liblognorm.com/files/download/%{name}-%{version}.tar.gz
+Patch0:           fix-clang.patch
 
 BuildRequires:    chrpath libfastjson-devel libestr-devel pcre-devel gcc
 
@@ -82,6 +83,9 @@ chrpath -d %{buildroot}%{_libdir}/liblognorm.so
 %doc %{_docdir}/liblognorm/html
 
 %changelog
+* Wed Jun 28 2023 yoo <sunyuechi@iscas.ac.cn> - 2.0.6-2
+- fix clang build error
+
 * Thu Jun 16 2022 SimpleUpdate Robot <tc@openeuler.org> - 2.0.6-1
 - Upgrade to version 2.0.6
 
