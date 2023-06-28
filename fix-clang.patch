@@ -1,0 +1,13 @@
+diff -u -r liblognorm-2.0.6/compat/asprintf.c liblognorm-2.0.6/compat/asprintf.c
+--- liblognorm-2.0.6/compat/asprintf.c	2018-11-06 16:27:21.000000000 +0800
++++ liblognorm-2.0.6/compat/asprintf.c	2023-06-28 12:51:34.000000000 +0800
+@@ -24,6 +24,9 @@
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <stdio.h>
++#ifdef asprintf
++#undef asprintf
++#endif
+ int asprintf(char **strp, const char *fmt, ...)
+ {
+   va_list ap;
